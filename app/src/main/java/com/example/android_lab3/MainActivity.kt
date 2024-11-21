@@ -17,4 +17,10 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
+    fun countLatinLetter(input: String): Int{
+        val latinRegex = Regex("[a-zA-Z]")
+        val latinChars = latinRegex.findAll(input)
+        return latinChars.count()
+    }
 }
